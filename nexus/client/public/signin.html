@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In to Nexus</title>
+        <link rel="icon" href="./icone.png" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body id="bkgd">
+        <div id="from" class="container">
+            <div class="row justify-content-around custom-line" >
+        <form class="row g-3">
+            <div class="row g-3">
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" placeholder="City" aria-label="City">
+                </div>
+                <div class="col-sm">
+                    <select class="form-select" id="autoSizingSelect">
+                        <option selected>Country</option>
+                        <option value="1">US</option>
+                        <option value="2">Canada</option>
+                        <option value="3">France</option>
+                      </select>
+                </div>
+              </div><div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">About you</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            <div class="row g-3">
+                <div class="col-6">
+                    <select class="form-select" id="autoSizingSelect">
+                        <option selected>Field of Interest</option>
+                        <option value="1">Programming</option>
+                        <option value="2">Translation</option>
+                        <option value="3">Art and design</option>
+                      </select>
+                </div>
+              <div class="col-6">
+                <input class="form-control" type="file" id="formFile" aria-label="upload you resume">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary"><a href='fieldsPage.html'>Submit form</a></button>
+            </div>
+          </form>
+            </div>
+        </div>
+        <script src="function.js"></script>
+    </body>
+</html>
