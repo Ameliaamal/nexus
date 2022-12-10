@@ -97,10 +97,8 @@ app.post('/postAjob', async (req, res) => {
        // layout: 'profile',
        // name: user.name, 
        // email: user.email,
-       // course: user.course,
-       // address: user.address,
-       // dob: user.dob,
-       // bio: user.bio,
+       // about: user.about,
+       // field: user.field,
    // })
 //})
 

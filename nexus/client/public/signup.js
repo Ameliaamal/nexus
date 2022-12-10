@@ -39,6 +39,8 @@ const handelSignup = async () => {
         email: document.getElementById('emailId').value,
         pass1: document.getElementById('passId').value,
         pass2: document.getElementById('passIdRepeat').value,
+        about: document.getElementById('about').value,
+        field: document.getElementById('field').value,
 
     }
 
@@ -57,6 +59,8 @@ const handelSignup = async () => {
                 password: formValue.pass1,
                 name: formValue.name,
                 email: formValue.email,
+                about: formValue.about,
+                field: formValue.field
   
             }) 
         });

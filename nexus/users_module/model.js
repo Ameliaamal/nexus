@@ -9,7 +9,9 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   }, 
-  password: String, 
+  password: String,
+  about: String,
+  field: String,
 })
 
 // create a model, or collection
