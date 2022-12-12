@@ -33,6 +33,15 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/public/login.html'));
 })
 
+app.get('/index2', (req, res) => {
+    console.log('accessing route /login, METHOD = GET');
+    res.sendFile(path.join(__dirname, '/client/public/index2.html'));
+})
+app.get('/jobposted', (req, res) => {
+    console.log('accessing route /login, METHOD = GET');
+    res.sendFile(path.join(__dirname, '/client/public/jobposted.html'));
+})
+
 app.post('/login', async (req, res) => {
     const body = req.body
 
@@ -84,23 +93,27 @@ app.post('/signup', async (req, res) => {
 })
 
 app.get('/postAjob', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/postAjob.html'))
+    res.sendFile(path.join(__dirname, '/client/public/postAjob.html'))
+})
+
+app.get('/contactPage', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/public/contactPage.html'))
 })
 
 app.post('/postAjob', async (req, res) => {
 
 })
 
-////app.get('/user/:email', (req, res) => {
-   // const user = userService.getUser(req.params.email)
-   // res.render('profile', {
-       // layout: 'profile',
-       // name: user.name, 
-       // email: user.email,
-       // about: user.about,
-       // field: user.field,
-   // })
-//})
+app.get('/user/:email', (req, res) => {
+    const user = userService.getUser(req.params.email)
+    res.render('profile', {
+        layout: 'profile',
+        name: user.name, 
+        email: user.email,
+        about: user.about,
+        field: user.field,
+   })
+})
 
 app.get('/dashboard', auth, async (req, res) => {
     try {
@@ -109,10 +122,8 @@ app.get('/dashboard', auth, async (req, res) => {
             layout: 'profile',
             name: user.name, 
             email: user.email,
-            course: user.course,
-            address: user.address,
-            dob: user.dob,
-            bio: user.bio,
+            about: user.about,
+            field: user.field,
         })
     } catch(error) {
         res.redirect('/login')

@@ -11,12 +11,13 @@
   }
   a {
     text-decoration: none;
-    color: #11dbdb;
+    color: #7bb8b1;
     transition: .5s ease;
   }
   a:hover {
-    color: #31c9b4;
+    color: #7bb8b1;
   }
+
   .form {
     background: rgb(22,19,54, 0.9);
     padding: 40px;
@@ -49,11 +50,11 @@
     transition: .5s ease;
   }
   .top-area li a:hover {
-    background: #12c5bc;
+    background: #7bb8b1;
     color: #ffffff;
   }
   .top-area .active a {
-    background: #12c5bc;
+    background: #7bb8b1;
     color: #ffffff;
   }
   

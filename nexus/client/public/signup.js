@@ -70,6 +70,7 @@ const handelSignup = async () => {
             console.log(responseBody)
             showError(responseBody.error)
         } 
+        window.location='./login';
     }
 }
 
